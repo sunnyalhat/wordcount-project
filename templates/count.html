@@ -1,0 +1,11 @@
+<h1>Word Counter</h1>
+<a href="{% url 'about' %}">About</a>
+<p>Content : {{ content }}</p>
+<p>Word Count : {{ wordcount }}</p>
+<br>
+<a href="{% url 'countForm' %}">Start Again</a>
+<br>
+<h2>Word Counts</h2>
+{% for word, counttotal in sorted_words %}
+    {{ word }} - {{ counttotal }} <br>
+{% endfor %}
